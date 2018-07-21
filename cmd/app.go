@@ -52,7 +52,7 @@ func Run() {
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:  "name,n",
-			Value: "善良的死神",
+			Value: "小说名",
 			Usage: "指定下载小说的名字",
 		},
 		cli.StringFlag{
@@ -96,7 +96,7 @@ func Run() {
 		} else if source == "4" {
 			cliInfo.Source = "sxyj"
 		}
-		if cliInfo.NovelName == "善良的死神" {
+		if cliInfo.NovelName == "小说名" {
 			fmt.Fprintln(os.Stdout, "请输入要下载的文件名")
 			return nil
 		}
