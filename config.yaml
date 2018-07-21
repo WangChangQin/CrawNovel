@@ -1,0 +1,23 @@
+version: 1.0
+max-goroutine: 20
+kindle-mail: "your kindle mail"
+use-mail: true
+engines:
+ 88dushu:
+  host: https://www.88dushu.com
+  searchUrl: https://www.88dushu.com/search/so.php?search_field=0&q=%s
+  existSel: "body > div.ops_cover > div > div.block_txt > h2 > a"
+  detailListSel:
+  listSel: "div.mulu li a"
+  titleSel: "body > div.novel > h1"
+  contentSel: "body > div.novel > div.yd_text2"
+  convertCode: true
+ bgq:
+  host: http://www.biquge.info
+  searchUrl: http://zhannei.baidu.com/cse/search?s=3058705213638573686&q=%s
+  existSel: "#results > div.result-list > div:nth-child(1) > div.result-game-item-detail > h3 > a"
+  detailListSel:
+  listSel: "#list > dl a"
+  titleSel: "#wrapper > div.content_read > div.box_con > div.bookname > h1"
+  contentSel: "#content"
+  convertCode: false
