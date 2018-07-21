@@ -69,9 +69,8 @@ func Run() {
 			Name:  "source,s",
 			Value: "3",
 			Usage: "可选:\n" +
-				"\tbqg2\t1\t" +
-				"\tbqg\t2\t" +
-				"\t88dushu\t3",
+				"\tbqg\t1\t" +
+				"\t88dushu\t2",
 		},
 		cli.StringFlag{
 			Name:  "web,w",
@@ -88,13 +87,9 @@ func Run() {
 		cliInfo.Web = c.String("web")
 		source := c.String("source")
 		if source == "1" {
-			cliInfo.Source = "bqg2"
-		} else if source == "2" {
 			cliInfo.Source = "bqg"
-		} else if source == "3" {
+		} else if source == "2" {
 			cliInfo.Source = "88dushu"
-		} else if source == "4" {
-			cliInfo.Source = "sxyj"
 		}
 		if cliInfo.NovelName == "小说名" {
 			fmt.Fprintln(os.Stdout, "请输入要下载的文件名")
